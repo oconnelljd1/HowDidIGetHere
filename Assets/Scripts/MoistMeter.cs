@@ -25,72 +25,67 @@ public class MoistMeter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-      switch(moistMeter)
-       {
-           case Array { Length 1 }:
-               moistLevelText.text = moistLevel[1];
-               print(moistLevel);
-               break;
-
-           case Array { Length 2 }:
-               moistLevelText.text = moistLevel[2];
-               break;
-
-           case Array { Length 3 }:
-               moistLevelText.text = moistLevel[3];
-               break;
-
-           case Array { Length 4 }:
-               moistLevelText.text = moistLevel[4];
-               break;
-
-           case Array { Length 5 }:
-               moistLevelText.text = moistLevel[5];
-               break;
-
-           case Array { Length 6 }:
-               moistLevelText.text = moistLevel[6];
-               break;
-
-           case Array { Length 7 }:
-               moistLevelText.text = moistLevel[7];
-               break;
-
-           case Array { Length 8 }:
-               moistLevelText.text = moistLevel[8];
-               break;
-
-           case Array { Length 9 }:
-               moistLevelText.text = moistLevel[9];
-               break;
-
-           case Array { Length 10 }:
-               moistLevelText.text = moistLevel[10];
-               break;
-
-
-       }*/
-
-      
-
+        
 
     }
     public void textUpdate(float value)
         {
 
-            if (value == 1)
-            {
-                moistLevelText.text = "1";
-            }
-
-
-
-
-
-
-
+        if (value == 1)
+        {
+           moistLevelText.text = "Dewy";
         }
+
+        if (value == 2)
+        {
+            moistLevelText.text = "Foggy";
+        }
+
+        if (value == 3)
+        {
+            moistLevelText.text = "Muggy";
+        }
+
+        if (value == 4)
+        {
+            moistLevelText.text = "Damp";
+        }
+
+        if (value == 5)
+        {
+            moistLevelText.text = "Dank";
+        }
+
+        if (value == 6)
+        {
+            moistLevelText.text = "Moist";
+        }
+
+        if (value == 7)
+        {
+            moistLevelText.text = "Wet";
+        }
+
+        if (value == 8)
+        {
+            moistLevelText.text = "Soggy";
+        }
+
+        if (value == 9)
+        {
+            moistLevelText.text = "Sopping";
+        }
+
+        if (value == 10)
+        {
+            moistLevelText.text = "Drenched";
+        }
+
+
+
+
+
+    }
 
      
 }
