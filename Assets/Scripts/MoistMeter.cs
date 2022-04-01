@@ -15,11 +15,11 @@ public class MoistMeter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // moistMeter = GameObject.Find("MoistMeter").GetComponent <Slider> ().value;
-        //moistLevelText = GameObject.Find("MoistLevel");
+        //moistMeter = GameObject.Find("MoistMeter").GetComponent <Slider> ().value;
+         
          moistLevelText = GetComponent <Text> ();
         
-        //string[] moistLevel = new string[] { "Dewy", "Foggy", "Muggy", "Damp", "Dank", "Moist", "Wet", "Soggy", "Sopping", "Drenched" };
+        
     }
 
     // Update is called once per frame
@@ -31,54 +31,64 @@ public class MoistMeter : MonoBehaviour
     public void textUpdate(float value)
         {
 
-        if (value == 1)
+        if (value == 0)
         {
            moistLevelText.text = "Dewy";
+            print(value);
+        }
+
+        if (value == 1)
+        {
+            moistLevelText.text = "Foggy";
+            print(value);
         }
 
         if (value == 2)
         {
-            moistLevelText.text = "Foggy";
+            moistLevelText.text = "Muggy";
+            print(value);
         }
 
         if (value == 3)
         {
-            moistLevelText.text = "Muggy";
+            moistLevelText.text = "Damp";
+            print(value);
         }
 
         if (value == 4)
         {
-            moistLevelText.text = "Damp";
+            moistLevelText.text = "Dank";
+            print(value);
         }
 
         if (value == 5)
         {
-            moistLevelText.text = "Dank";
+            moistLevelText.text = "Moist";
+            print(value);
         }
 
         if (value == 6)
         {
-            moistLevelText.text = "Moist";
+            moistLevelText.text = "Wet";
+            print(value);
         }
 
         if (value == 7)
         {
-            moistLevelText.text = "Wet";
+            moistLevelText.text = "Soggy";
+            print(value);
         }
 
         if (value == 8)
         {
-            moistLevelText.text = "Soggy";
+            moistLevelText.text = "Sopping";
+            print(value);
         }
 
         if (value == 9)
         {
-            moistLevelText.text = "Sopping";
-        }
-
-        if (value == 10)
-        {
             moistLevelText.text = "Drenched";
+            print(value);
         }
 
 
