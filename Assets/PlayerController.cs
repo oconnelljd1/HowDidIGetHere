@@ -38,11 +38,11 @@ public class PlayerController : MonoBehaviour
         {
             if(lastButton == "Horizontal")
             {
-                velocity = new Vector2(Input.GetAxis("Horizontal"), 0);
+                velocity = new Vector2(Input.GetAxisRaw("Horizontal"), 0);
             }
             else if(lastButton == "Vertical")
             {
-                velocity = new Vector2(0, Input.GetAxis("Vertical"));
+                velocity = new Vector2(0, Input.GetAxisRaw("Vertical"));
             }
         }
 
@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
 
         if(!isMoving && !hit && velocity.sqrMagnitude > 0)
         {
-            StartCoroutine("Move");
+            StartCoroutine(Move());
         }
 
         lastDirection = direction;
