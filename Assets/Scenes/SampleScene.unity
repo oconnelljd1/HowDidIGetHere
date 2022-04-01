@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -403,6 +403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 909445104}
   - component: {fileID: 909445105}
+  - component: {fileID: 909445106}
   m_Layer: 5
   m_Name: MoistMeter
   m_TagString: Untagged
@@ -429,7 +430,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -664, y: 517}
+  m_AnchoredPosition: {x: -633, y: 548}
   m_SizeDelta: {x: 762.5107, y: 133.5454}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &909445105
@@ -477,7 +478,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 490295833}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 10
+  m_MaxValue: 9
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
@@ -495,6 +496,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &909445106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 909445103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2df049930e318e44baa6b8042eeefea3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moistMeter: {fileID: 0}
+  moistLevelText: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,6 +718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2df049930e318e44baa6b8042eeefea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moistMeter: {fileID: 909445105}
   moistLevelText: {fileID: 1145580674}
 --- !u!114 &1145580674
 MonoBehaviour:

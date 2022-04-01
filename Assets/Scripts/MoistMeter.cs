@@ -6,16 +6,16 @@ using UnityEngine.UI;
 
 public class MoistMeter : MonoBehaviour
 {
-    
-     
-    
+
+    [SerializeField] private Slider moistMeter;
+
     //public GameObject moistLevelText;
     public Text moistLevelText;
 
     // Start is called before the first frame update
     void Start()
     {
-        //moistMeter = GameObject.Find("MoistMeter").GetComponent <Slider> ().value;
+       // moistMeter = GameObject.Find("MoistMeter").GetComponent <Slider> ().value;
          
          moistLevelText = GetComponent <Text> ();
         
@@ -25,7 +25,7 @@ public class MoistMeter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        textUpdate(moistMeter.value);
 
     }
     public void textUpdate(float value)
