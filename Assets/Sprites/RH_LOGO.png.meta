@@ -1,19 +1,7 @@
 fileFormatVersion: 2
-guid: f09d68cc19ec54e1ebba0a103575bb4f
+guid: 1ac534d148b494b6ca387c35dca7bb6b
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -9098683720709321140
-    second: Moist_Meter_0
-  - first:
-      213: -853335134198312403
-    second: Moist_Meter_1
-  - first:
-      213: -191960172415520916
-    second: Moist_Meter_2
-  - first:
-      213: -4904389275430510060
-    second: Moist_Meter_3
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -53,7 +41,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -125,91 +113,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Moist_Meter_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 128
-        height: 32
-      alignment: 1
-      pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c4ecd77ec5bfab180800000000000000
-      internalID: -9098683720709321140
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Moist_Meter_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 128
-        height: 32
-      alignment: 1
-      pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d22dfb377385824f0800000000000000
-      internalID: -853335134198312403
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Moist_Meter_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 128
-        height: 32
-      alignment: 1
-      pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c6f66208d35065df0800000000000000
-      internalID: -191960172415520916
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Moist_Meter_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 128
-        height: 32
-      alignment: 1
-      pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 412aab540fb10fbb0800000000000000
-      internalID: -4904389275430510060
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
