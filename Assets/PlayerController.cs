@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 lastDirection;
     private Vector2 velocity;
     private bool isMoving = false;
+    private string lastButton = "Horizontal";
     // Start is called before the first frame update
     void Start()
     {
@@ -19,18 +20,40 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Vector2 direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        velocity = Vector2.zero;
+        // velocity = Vector2.zero;
         if(Mathf.Abs(direction.x) > Mathf.Abs(lastDirection.x))
         {
-            velocity.x = direction.x;
-            velocity.y = 0;
+            lastButton = "Horizontal";
         }
-        if(Mathf.Abs(direction.y) > Mathf.Abs(lastDirection.y))
+        else if(Mathf.Abs(direction.y) > Mathf.Abs(lastDirection.y))
         {
-            velocity.y = direction.y;
-            velocity.x = 0;
+            lastButton = "Vertical";
         }
-        if(!isMoving && velocity.sqrMagnitude > 0)
+
+        if(Input.GetAxisRaw(lastButton) == 0)
+        {
+            velocity = direction;
+        }
+        else
+        {
+            if(lastButton == "Horizontal")
+            {
+                velocity = new Vector2(Input.GetAxis("Horizontal"), 0);
+            }
+            else if(lastButton == "Vertical")
+            {
+                velocity = new Vector2(0, Input.GetAxis("Vertical"));
+            }
+        }
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, velocity, 1f);
+        if(hit)
+        {
+            lastDirection = direction;
+            return;
+        }
+
+        if(!isMoving && !hit && velocity.sqrMagnitude > 0)
         {
             StartCoroutine("Move");
         }
@@ -47,11 +70,12 @@ public class PlayerController : MonoBehaviour
         Vector3 final = initial;
         final.x += direction.x;
         final.y += direction.y;
+
         float elapsed = 0f;
         while(elapsed < timeToMove)
         {
             elapsed += Time.deltaTime;
-            Vector3.MoveTowards(initial, final, elapsed/timeToMove);
+            transform.position = Vector3.MoveTowards(initial, final, elapsed/timeToMove);
             yield return null;
         }
         transform.position = final;
