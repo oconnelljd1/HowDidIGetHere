@@ -19,7 +19,7 @@ public class MoistMeter : MonoBehaviour
         //moistLevelText = GameObject.Find("MoistLevel");
          moistLevelText = GetComponent <Text> ();
         
-        //string[] moistLevel = new string[] { "1", "2", "3", "4", "5", "6" "7", "8", "9", "10" };
+        //string[] moistLevel = new string[] { "Dewy", "Foggy", "Muggy", "Damp", "Dank", "Moist", "Wet", "Soggy", "Sopping", "Drenched" };
     }
 
     // Update is called once per frame
