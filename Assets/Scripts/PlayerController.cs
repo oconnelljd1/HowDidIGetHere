@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
+    [SerializeField] private Animator animator;
     [SerializeField] private float timeToMove = 0.2f;
     private Vector2 lastDirection;
     private Vector2 velocity;
@@ -20,7 +21,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Vector2 direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        // velocity = Vector2.zero;
         if(Mathf.Abs(direction.x) > Mathf.Abs(lastDirection.x))
         {
             lastButton = "Horizontal";
@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            animator.SetBool("North", Input.GetAxisRaw(lastButton) > 0);
             if(lastButton == "Horizontal")
             {
                 velocity = new Vector2(Input.GetAxisRaw("Horizontal"), 0);
@@ -64,6 +65,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator Move()
     {
         isMoving = true;
+        animator.SetBool("Walking", true);
 
         Vector2 direction = new Vector2(velocity.x, velocity.y);
         Vector3 initial = transform.position;
@@ -81,5 +83,6 @@ public class PlayerController : MonoBehaviour
         transform.position = final;
 
         isMoving = false;
+        animator.SetBool("Walking", false);
     }
 }
